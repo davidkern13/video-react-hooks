@@ -1,4 +1,5 @@
 import { IQueQue } from "./interface";
+
 class DispatcherHooks {
   private queue: IQueQue[] = [];
   private isDispatching: boolean = false;
@@ -44,30 +45,32 @@ class DispatcherHooks {
   };
 
   dispatch = () => {
-    while (this.queue.length > 0) {
-      const queuedCallback = this.queue[0];
-      const callback = queuedCallback.callback;
-      const deps = queuedCallback.deps;
-
-      if (callback.toString() === "() => {}") {
-        this.queue.shift();
-        continue;
-      }
-
-      try {
-        callback();
-      } catch (error) {
-        console.error("Error occurred while executing task:", error);
-      }
-
-      if (this.compareDeps(this.previousDeps, deps)) {
-        this.queue.shift();
-      } else {
-        this.previousDeps = deps;
-      }
+    if (this.queue.length === 0) {
+      this.isDispatching = false;
+      return;
     }
 
-    this.isDispatching = false;
+    const queuedCallback = this.queue[0];
+
+    const callback = queuedCallback.callback;
+
+    const deps = queuedCallback.deps;
+
+    if (callback.toString() === "() => {}") {
+      this.queue.shift();
+      this.dispatch();
+      return;
+    }
+
+    callback();
+
+    if (this.compareDeps(this.previousDeps, deps)) {
+      this.queue.shift();
+    } else {
+      this.previousDeps = deps;
+    }
+
+    Promise.resolve().then(() => this.dispatch());
   };
 }
 
