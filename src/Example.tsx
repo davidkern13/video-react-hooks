@@ -4,7 +4,6 @@ import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect,
 function App() {
   const [test, setTest] = useState<any>();
 
-
   useReadyEffect(() => {
     console.log('useReadyEffect');
   }, []);
