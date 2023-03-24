@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useEndEffect } from '../lib';
+import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useEndEffect } from './lib';
 
 function App() {
   const [test, setTest] = useState<any>();
