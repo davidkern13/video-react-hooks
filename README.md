@@ -1,11 +1,11 @@
 ![video-react-hooks](https://i.ibb.co/CzzMNM7/video-react-1.jpg)
 
-This package suitable for ```video javascript``` element.
+<center>This package suitable for ```video javascript``` element. The source written in javascript and typescript.</center>
 
 # Why
 
-Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency
-This makes makes not readable code and difficult to maintain. video-react-hooks possible to use across the application in component of video or other components that need to be affected by the video.
+Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
+This makes makes not readable code and difficult to maintain. video-react-hooks represent video events in hooks shape, possible to use across the application in component of video or other components that need to be affected by the video events.
 
 # Instalation
 
