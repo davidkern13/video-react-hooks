@@ -1,6 +1,6 @@
 ![video-react-hooks](https://i.ibb.co/CzzMNM7/video-react-1.jpg)
 
-<p align="center">This package suitable for ```video javascript``` element. The source written in javascript and typescript.</p>
+<p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
 # Why
 
