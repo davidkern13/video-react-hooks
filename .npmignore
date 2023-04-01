@@ -1,0 +1,7 @@
+/package-lock.json
+/.eslintrc.json
+/.prettierrc.json
+/tsconfig.json
+/src
+/public
+/chunk

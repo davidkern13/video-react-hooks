@@ -16,7 +16,7 @@ export const debounce = (func: any, wait: any) => {
 };
 
 export const getVideoStatus = async () => {
-  const video: any = await videoPlayer.getVideo();
+  const video: any = await videoPlayer.getMountedVideo();
   return video.readyState >= 4;
 };
 

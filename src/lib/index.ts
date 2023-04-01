@@ -13,22 +13,17 @@ export const useReadyEffect = (
   }, [create]);
 
   const registerListener = useCallback(() => {
-    checkVideoStatus()
-      .then(() => {
-        dispatcher.enqueue({ callback, deps });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    dispatcher.enqueue({ callback, deps });
   }, [callback, deps]);
 
   const listenerProps = {
-    type: "loadedmetadata",
+    type: "playerready",
     listener: registerListener,
   };
 
   useEffect(() => {
     videoPlayer.addEventListener(listenerProps);
+    videoPlayer.getReadyPlayer();
     return () => {
       videoPlayer.removeEventListener(listenerProps);
     };
@@ -44,7 +39,13 @@ export const usePlayingEffect = (
   }, [create]);
 
   const registerListener = useCallback(() => {
-    dispatcher.enqueue({ callback, deps });
+    checkVideoStatus()
+      .then(() => {
+        dispatcher.enqueue({ callback, deps });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [callback, deps]);
 
   const listenerProps = {
@@ -156,7 +157,7 @@ export const useTimeUpdateEffect = (
     const currentTime = Date.now();
     const timeDiff = prevTime ? currentTime - prevTime : 0;
 
-    if (prevTime === null || timeDiff >= 1000) {
+    if (prevTime === null || timeDiff >= 1000 / 60) { // run once per frame
       prevTime = currentTime;
       dispatcher.enqueue({ callback, deps });
     }
@@ -282,64 +283,3 @@ export const useVolumeChangeEffect = (
     };
   }, []);
 };
-
-// module.exports = {
-//   useReadyEffect,
-//   usePlayingEffect,
-//   usePauseEffect,
-//   useSeekingEffect,
-//   useSeekedEffect,
-//   useTimeUpdateEffect,
-//   useEndEffect,
-//   useWaitingEffect,
-//   useErrorEffect,
-//   useVolumeChangeEffect,
-// };
-
-// StalledEffect: (create: any, deps: Array<any> | void | null) => {
-//   let errorSequence: any = [];
-
-//   const handleError = (event: any) => {
-//     errorSequence = [...errorSequence, event.type];
-//   };
-
-//   const resetVideo = () => {
-//     videoPlayer?.src(videoPlayer?.currentSrc());
-//   };
-
-//   const checkProgress = () => {
-//     const currentTime = videoPlayer?.currentTime();
-//     const previousTime = videoPlayer?.previousTime || 0;
-//     videoPlayer?.previousTime = currentTime;
-
-//     if (previousTime === currentTime && errorSequence.length > 0) {
-//       const lastEvent = errorSequence[errorSequence.length - 1];
-//       const currentTime = Date.now();
-
-//       if (
-//         (lastEvent === 'suspend' || lastEvent === 'stalled') &&
-//         currentTime - videoPlayer?.suspendTime >= 5000
-//       ) {
-//         resetVideo();
-//       }
-//     } else {
-//       errorSequence = [];
-//       videoPlayer?.suspendTime = Date.now();
-//     }
-//   };
-
-//   const intervalId = setInterval(checkProgress, 1000);
-
-//   const cleanup = () => clearInterval(intervalId);
-
-//   videoPlayer.addEventListener('error', handleError);
-//   videoPlayer.addEventListener('suspend', handleError);
-//   videoPlayer.addEventListener('stalled', handleError);
-
-//   return () => {
-//     videoPlayer.removeEventListener('error', handleError);
-//     videoPlayer.removeEventListener('suspend', handleError);
-//     videoPlayer.removeEventListener('stalled', handleError);
-//     cleanup();
-//   };
-//}

@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from "react";
-import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useEndEffect } from './lib';
+import React, {useState, useRef, useEffect} from "react";
+import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useErrorEffect, useEndEffect } from './lib';
+import VideoJS from './VideoJS';
 
 function App() {
-  const [test, setTest] = useState<any>();
+  const [stateEvent, setStateEvent] = useState<string>();
+
+  const playerRef = useRef(null);
 
   useReadyEffect(() => {
     console.log('useReadyEffect');
@@ -14,12 +17,12 @@ function App() {
 
   usePlayingEffect(() => {
     console.log('usePlayingEffect');
-    setTest('usePlayingEffect');
+    setStateEvent('usePlayingEffect');
   }, []);
 
   usePauseEffect(() => {
     console.log('usePauseEffect');
-    setTest('usePauseEffect');
+    setStateEvent('usePauseEffect');
   }, []);
 
   useSeekingEffect(() => {
@@ -34,25 +37,64 @@ function App() {
     console.log('useTimeUpdateEffect');
   }, []);
 
+  useErrorEffect(() => {
+    console.log('useErrorEffect');
+  }, []);
+
   useEndEffect(() => {
     console.log('useEndEffect');
   }, []);
 
   useEffect(() => {
-    console.log('test', test);
-  }, [test]);
+    console.log('stateEvent', stateEvent);
+  }, [stateEvent]);
 
+
+  const videoJsOptions = {
+    liveui:true,
+    controls: true,
+    fluid: true,
+    sources: [
+      {
+        src: 'http://localhost:8000/live/output.m3u8',
+        type: 'application/x-mpegURL'
+      }
+    ]
+  };
+
+  const handlePlayerReady = (player: any) => {
+    playerRef.current = player;
+
+    console.log('playerRef.current', playerRef.current);
+
+    player.on('waiting', () => {
+      console.log('player is waiting');
+    });
+    player.on('play', () => {
+      console.log('player is play');
+    });
+    player.on('pause', () => {
+      console.log('player is pause');
+    });
+    player.on('seeking', () => {
+      console.log('player is seeking');
+    });
+    player.on('seeked', () => {
+      console.log('player is seeked');
+    });
+
+    player.on('dispose', () => {
+      console.log('player will dispose');
+    });
+  };
 
   return (
-    <div className="App">
-       <video controls>
-        <source
-          src="https://www.w3schools.com/tags/movie.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <>
+      Live
+      <div className="live" style={{width:"100%", height:"1200px"}}>
+          <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+      </div>
+    </>
   );
 }
 

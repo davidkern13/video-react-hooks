@@ -47,7 +47,9 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.3",
+    "@types/video.js": "^7.3.51",
     "tslib": "^2.5.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "video.js": "^8.0.4"
   }
 }

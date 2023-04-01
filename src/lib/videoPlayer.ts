@@ -3,7 +3,11 @@ class VideoPlayer {
   video: Nullable<HTMLVideoElement> = null;
   status: Nullable<string> = null;
 
-  async getVideo(): Promise<HTMLVideoElement> {
+  constructor() {
+    this.getMountedVideo();
+  }
+
+  async getMountedVideo(): Promise<HTMLVideoElement> {
     if (this.video) {
       return this.video;
     }
@@ -15,55 +19,76 @@ class VideoPlayer {
       let videoTimeoutId: NodeJS.Timeout;
 
       const checkForVideo = () => {
-        this.video = document.querySelector('video');
+        this.video = document.querySelector("video");
         if (this.video) {
           clearTimeout(videoTimeoutId);
           resolve(this.video);
         } else if (++attempts >= maxAttempts) {
           clearTimeout(videoTimeoutId);
-          reject(new Error('Video element not found'));
+          reject(new Error("Video element not found"));
         } else {
-          videoTimeoutId = setTimeout(checkForVideo, 100);
+          videoTimeoutId = setTimeout(checkForVideo, 10);
         }
       };
 
-      videoTimeoutId = setTimeout(checkForVideo, 100);
+      videoTimeoutId = setTimeout(checkForVideo, 10);
 
       const cleanup = () => {
         clearTimeout(videoTimeoutId);
       };
       Promise.resolve().then(() => {
-        this.video?.removeEventListener('loadedmetadata', cleanup);
+        this.video?.removeEventListener("loadeddata", cleanup);
       });
-      this.video?.addEventListener('loadedmetadata', cleanup);
+      this.video?.addEventListener("loadeddata", cleanup);
     });
   }
 
-  async addEventListener({ type, listener, options }: IListener): Promise<void> {
+  async addEventListener({
+    type,
+    listener,
+    options,
+  }: IListener): Promise<void> {
     if (!type || !listener) {
-      console.log('Missing type or listener!');
+      console.log("Missing type or listener!");
       return;
     }
-    const video = await this.getVideo();
+    const video = this.video;
+    if (!video) return;
+
     video.addEventListener(
       type,
       (event: Event) => {
         this.status = event.type;
-        typeof listener === 'function' && listener(event);
+        console.log("status", this.status);
+        typeof listener === "function" && listener(event);
       },
       options
     );
   }
 
-  async removeEventListener({ type, listener, options }: IListener): Promise<void> {
+  async removeEventListener({
+    type,
+    listener,
+    options,
+  }: IListener): Promise<void> {
     if (!type || !listener) {
-      console.log('Missing type or listener!');
+      console.log("Missing type or listener!");
       return;
     }
-    const video = await this.getVideo();
+    const video = this.video;
+    if (!video) return;
+
     video.removeEventListener(type, listener, options);
   }
 
+  getReadyPlayer(): void {
+    const readyEvent = new Event("playerready");
+    videoPlayer?.dispatchEvent(readyEvent);
+  }
+  dispatchEvent(event: any): void {
+    this.video?.dispatchEvent(event);
+  }
+  
   getStatus(): Nullable<string> {
     return this.status;
   }

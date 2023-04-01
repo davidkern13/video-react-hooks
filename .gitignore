@@ -12,6 +12,9 @@
 # production
 /build
 
+# development
+/chunk
+
 # misc
 .DS_Store
 .env.local
