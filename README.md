@@ -64,3 +64,10 @@ export const VideoComponent = () => {
 | ```useEndEffect``` | video is ended |
 | ```useErrorEffect``` | error occur |
 | ```useVolumeChangeEffect``` | volume change |
+
+
+### Testing hooks with video type.
+
+| Hls | mp4 |
+| ------------- | ------------- |
+| :white_check_mark: | :white_check_mark: |
