@@ -68,6 +68,6 @@ export const VideoComponent = () => {
 
 ### Testing hooks with video type.
 
-| Hls | mp4 |
+| HLS(LIVE) | HLS(VOD) | MP4 |
 | ------------- | ------------- |
-| :white_check_mark: | :white_check_mark: |
+| :white_check_mark: | :white_check_mark: | :white_check_mark: |
