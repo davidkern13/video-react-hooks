@@ -52,15 +52,15 @@ export const VideoComponent = () => {
 
 ### Hooks.
 
-| Event | Hook |
+| Hook | Execution |
 | ------------- | ------------- |
-| ```loadedmetadata``` | ```useReadyEffect``` |
-| ```playing``` | ```usePlayingEffect``` |
-| ```pause``` | ```usePauseEffect``` |
-| ```seeking``` | ```useSeekingEffect``` |
-| ```seeked``` | ```useSeekedEffect``` |
-| ```timeupdate``` | ```useTimeUpdateEffect``` |
-| ```ended``` | ```useEndEffect``` |
-| ```waiting``` | ```useWaitingEffect``` |
-| ```error``` | ```useErrorEffect``` |
-| ```volumechange``` | ```useVolumeChangeEffect``` |
+| ```useReadyEffect``` |  video is initialize |
+| ```usePlayingEffect``` |  video is playing |
+| ```usePauseEffect``` |  video is paused |
+| ```useWaitingEffect``` | video is waiting |
+| ```useSeekingEffect``` |  video is seeking |
+| ```useSeekedEffect``` | video is seeked |
+| ```useTimeUpdateEffect``` | one time per frame |
+| ```useEndEffect``` | video is ended |
+| ```useErrorEffect``` | error occur |
+| ```useVolumeChangeEffect``` | volume change |
