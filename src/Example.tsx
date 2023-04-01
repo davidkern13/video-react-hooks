@@ -1,11 +1,11 @@
-import React, {useState, useRef, useEffect} from "react";
+import {useState, useRef, useEffect} from "react";
 import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useErrorEffect, useEndEffect } from './lib';
 import VideoJS from './VideoJS';
 
-function App() {
+const App = () => {
   const [stateEvent, setStateEvent] = useState<string>();
 
-  const playerRef = useRef(null);
+  const playerRef = useRef<any>();
 
   useReadyEffect(() => {
     console.log('useReadyEffect');
@@ -62,7 +62,7 @@ function App() {
     ]
   };
 
-  const handlePlayerReady = (player: any) => {
+  const handlePlayerReady = (player: Player) => {
     playerRef.current = player;
 
     console.log('playerRef.current', playerRef.current);

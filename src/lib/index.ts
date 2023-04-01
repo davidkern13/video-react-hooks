@@ -157,7 +157,7 @@ export const useTimeUpdateEffect = (
     const currentTime = Date.now();
     const timeDiff = prevTime ? currentTime - prevTime : 0;
 
-    if (prevTime === null || timeDiff >= 1000 / 60) { // run once per frame
+    if (prevTime === null || timeDiff >= 1000 / 60) {
       prevTime = currentTime;
       dispatcher.enqueue({ callback, deps });
     }

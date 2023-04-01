@@ -37,23 +37,3 @@ export const checkVideoStatus = () => {
     }, 10000);
   });
 };
-
-// export const memoizePreviousValue = () => {
-//   let prevValue: any = null;
-
-//   return (currentValue: any) => {
-//     const memoizedValue = prevValue;
-//     prevValue = currentValue;
-//     return memoizedValue;
-//   };
-// };
-
-// const obj = {
-//   value: null as any,
-//   get latest() {
-//     return this.value;
-//   },
-//   set current(data: any) {
-//     this.value = data;
-//   },
-// };

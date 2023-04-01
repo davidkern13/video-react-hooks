@@ -60,7 +60,7 @@ export const VideoComponent = () => {
 | ```useWaitingEffect``` | video is waiting |
 | ```useSeekingEffect``` |  video is seeking |
 | ```useSeekedEffect``` | video is seeked |
-| ```useTimeUpdateEffect``` | one time per frame |
+| ```useTimeUpdateEffect``` | run once per frame |
 | ```useEndEffect``` | video is ended |
 | ```useErrorEffect``` | error occur |
 | ```useVolumeChangeEffect``` | volume change |
