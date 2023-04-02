@@ -14,7 +14,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": false
   },
   "include": ["src/lib/**/*"],
   "exclude": ["node_modules", "**/*.test.ts"]
