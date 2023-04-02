@@ -14,8 +14,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false
+    "isolatedModules": true
   },
-  "include": ["src/lib/**/*"],
+  "include": ["src/lib/**/*", "video-react-hooks.d.ts"],
   "exclude": ["node_modules", "**/*.test.ts"]
 }
