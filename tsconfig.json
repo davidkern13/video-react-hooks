@@ -16,6 +16,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["src/lib/**/*", "video-react-hooks.d.ts"],
+  "include": ["src/lib/**/*", "video-react-hooks.d.ts", "dist/video-react-hooks.d.ts"],
   "exclude": ["node_modules", "**/*.test.ts"]
 }
