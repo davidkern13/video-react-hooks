@@ -3,10 +3,10 @@ import { dispatcher } from "./dispatcher";
 import { videoPlayer } from "./videoPlayer";
 import { ICreateEffect, IDepsEffect, Nullable } from "./interface";
 
-export const useReadyEffect = (
+export function useReadyEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -29,10 +29,10 @@ export const useReadyEffect = (
   }, []);
 };
 
-export const usePlayingEffect = (
+export function usePlayingEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -54,10 +54,10 @@ export const usePlayingEffect = (
   }, []);
 };
 
-export const usePauseEffect = (
+export function usePauseEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -85,10 +85,10 @@ export const usePauseEffect = (
   }, []);
 };
 
-export const useSeekingEffect = (
+export function useSeekingEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -110,10 +110,10 @@ export const useSeekingEffect = (
   }, []);
 };
 
-export const useSeekedEffect = (
+export function useSeekedEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -135,10 +135,10 @@ export const useSeekedEffect = (
   }, []);
 };
 
-export const useTimeUpdateEffect = (
+export function useTimeUpdateEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   let requestAnimationId: Nullable<number> = null;
   let prevTime: Nullable<number> = null;
 
@@ -177,10 +177,10 @@ export const useTimeUpdateEffect = (
   };
 };
 
-export const useEndEffect = (
+export function useEndEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -202,10 +202,10 @@ export const useEndEffect = (
   }, []);
 };
 
-export const useWaitingEffect = (
+export function useWaitingEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -227,10 +227,10 @@ export const useWaitingEffect = (
   }, []);
 };
 
-export const useErrorEffect = (
+export function useErrorEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -252,10 +252,10 @@ export const useErrorEffect = (
   }, []);
 };
 
-export const useVolumeChangeEffect = (
+export function useVolumeChangeEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-) => {
+){
   const callback = useCallback(() => {
     return create();
   }, [create]);
