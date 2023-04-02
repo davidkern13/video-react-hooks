@@ -85,10 +85,10 @@ class VideoPlayer {
     const readyEvent = new Event("playerready");
     videoPlayer?.dispatchEvent(readyEvent);
   }
-  dispatchEvent(event: any): void {
+  dispatchEvent(event: Event): void {
     this.video?.dispatchEvent(event);
   }
-  
+
   getStatus(): Nullable<string> {
     return this.status;
   }

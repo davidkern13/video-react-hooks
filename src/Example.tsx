@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useErrorEffect, useEndEffect } from './lib';
 import VideoJS from './VideoJS';
 
@@ -62,7 +62,7 @@ const App = () => {
     ]
   };
 
-  const handlePlayerReady = (player: Player) => {
+  const handlePlayerReady = (player: any) => {
     playerRef.current = player;
 
     console.log('playerRef.current', playerRef.current);

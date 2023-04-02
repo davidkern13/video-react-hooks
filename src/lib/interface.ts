@@ -19,7 +19,7 @@ export interface IQueQue extends DepsProp {
 }
 
 export interface ICreateEffect {
-  (): () => void;
+  (): void;
 }
 export interface IDepsEffect {
   deps: Array<any> | void | null;

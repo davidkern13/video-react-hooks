@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import videojs from "video.js";
 
-// Styles
 import "video.js/dist/video-js.css";
 
 interface IVideoPlayerProps {
@@ -14,7 +13,7 @@ const VideoPlayer: React.FC<IVideoPlayerProps> = ({ options, onReady }) => {
   const playerRef = useRef<any>();
 
   useEffect(() => {
-    // make sure Video.js player is only initialized once
+    //player is only initialized once
     if (!playerRef.current) {
       const videoElement = videoRef.current;
       if (!videoElement) return;
@@ -25,14 +24,11 @@ const VideoPlayer: React.FC<IVideoPlayerProps> = ({ options, onReady }) => {
       });
 
     } else {
-      // you can update player here [update player through props]
-      // const player = playerRef.current;
-      // player.autoplay(options.autoplay);
-      // player.src(options.sources);
+      // you can update player here
     }
-  }, [options, videoRef]);
+  }, [options, onReady]);
 
-  // Dispose the Video.js player when the functional component unmounts
+
   useEffect(() => {
     const player = playerRef.current;
 
