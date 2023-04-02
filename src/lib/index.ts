@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback } from "react";
 import { dispatcher } from "./dispatcher";
 import { videoPlayer } from "./videoPlayer";
 import { ICreateEffect, IDepsEffect, Nullable } from "./interface";
@@ -6,7 +6,7 @@ import { ICreateEffect, IDepsEffect, Nullable } from "./interface";
 export function useReadyEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -27,12 +27,12 @@ export function useReadyEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function usePlayingEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -52,12 +52,12 @@ export function usePlayingEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function usePauseEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -83,12 +83,12 @@ export function usePauseEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function useSeekingEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -108,12 +108,12 @@ export function useSeekingEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function useSeekedEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -133,12 +133,12 @@ export function useSeekedEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function useTimeUpdateEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   let requestAnimationId: Nullable<number> = null;
   let prevTime: Nullable<number> = null;
 
@@ -175,12 +175,12 @@ export function useTimeUpdateEffect(
     requestAnimationId && window.cancelAnimationFrame(requestAnimationId);
     videoPlayer.removeEventListener(listenerProps);
   };
-};
+}
 
 export function useEndEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -200,12 +200,12 @@ export function useEndEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function useWaitingEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -225,12 +225,12 @@ export function useWaitingEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function useErrorEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -250,12 +250,12 @@ export function useErrorEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
 
 export function useVolumeChangeEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
-){
+) {
   const callback = useCallback(() => {
     return create();
   }, [create]);
@@ -275,4 +275,4 @@ export function useVolumeChangeEffect(
       videoPlayer.removeEventListener(listenerProps);
     };
   }, []);
-};
+}
