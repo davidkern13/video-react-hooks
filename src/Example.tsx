@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect} from "react";
-import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useErrorEffect, useEndEffect } from './lib';
+import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useErrorEffect, useEndEffect } from 'video-react-hooks';
 import VideoJS from './VideoJS';
 
 const App = () => {
@@ -56,8 +56,8 @@ const App = () => {
     fluid: true,
     sources: [
       {
-        src: 'http://localhost:8000/live/output.m3u8',
-        type: 'application/x-mpegURL'
+        src: 'https://www.w3schools.com/tags/movie.mp4',
+        type: 'video/mp4'
       }
     ]
   };
