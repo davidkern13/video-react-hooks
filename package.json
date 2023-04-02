@@ -1,6 +1,6 @@
 {
   "name": "video-react-hooks",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "build/index.js",
   "dependencies": {
     "@types/react": "^18.0.28",
