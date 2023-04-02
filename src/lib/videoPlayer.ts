@@ -59,7 +59,6 @@ class VideoPlayer {
       type,
       (event: Event) => {
         this.status = event.type;
-        console.log("status", this.status);
         typeof listener === "function" && listener(event);
       },
       options
