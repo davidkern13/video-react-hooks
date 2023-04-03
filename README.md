@@ -20,6 +20,8 @@ npm install --save video-react-hooks
 
 Each hook based on video event and executed when suitable event will fire, the hooks will executed after video will initialized instead of execute hook after render like react do, but under the hood video-react-hooks also used the react hooks.
 
+[Check Live Example](https://codesandbox.io/s/video-react-hooks-n9bu3d)
+
 ```JavaScript
 
 import { useReadyEffect, usePlayingEffect, usePauseEffect } from 'video-react-hooks';

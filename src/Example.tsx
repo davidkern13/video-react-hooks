@@ -1,12 +1,11 @@
-import React, {useState, useRef, useEffect, MutableRefObject} from "react";
-// import { VideoJsPlayer, VideoJsPlayerOptions } from "video.js";
+import React, {useState, useRef, useEffect} from "react";
 import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useErrorEffect, useEndEffect } from 'video-react-hooks';
 import VideoJS from './VideoJS';
 
 const App = () => {
   const [stateEvent, setStateEvent] = useState<string>();
 
-  const playerRef = useRef<MutableRefObject<any>>();
+  const playerRef = useRef<null>();
 
   useReadyEffect(() => {
     console.log('useReadyEffect');
@@ -90,12 +89,9 @@ const App = () => {
   };
 
   return (
-    <>
-      Live
       <div className="live" style={{width:"100%", height:"1200px"}}>
           <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
       </div>
-    </>
   );
 }
 
