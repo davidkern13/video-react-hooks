@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "module": "commonjs",
     "target": "es5",
-    "emitDeclarationOnly": false,
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "preserve",
     "outDir": "dist",
