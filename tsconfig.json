@@ -3,7 +3,6 @@
     "baseUrl": "./",
     "module": "commonjs",
     "target": "es5",
-    "emitDeclarationOnly": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "preserve",
     "outDir": "dist",
