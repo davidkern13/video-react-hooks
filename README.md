@@ -2,9 +2,6 @@
 
 <p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
-# in maintenance until version 1.0.0!
-
-
 # Why
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
