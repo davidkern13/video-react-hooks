@@ -1,6 +1,6 @@
 {
   "name": "video-react-hooks",
-  "version": "0.10.8",
+  "version": "0.10.9",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
