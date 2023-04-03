@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
     "target": "es5",
+    "emitDeclarationOnly": true,
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react",
+    "jsx": "preserve",
     "outDir": "dist",
     "allowJs": true,
     "skipLibCheck": true,
@@ -11,11 +14,10 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["src/lib/**/*"],
+  "include": ["src/lib/**/*", "dist"],
   "exclude": ["node_modules", "**/*.test.ts"]
 }

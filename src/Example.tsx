@@ -1,11 +1,12 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, {useState, useRef, useEffect, MutableRefObject} from "react";
+// import { VideoJsPlayer, VideoJsPlayerOptions } from "video.js";
 import { useReadyEffect,usePlayingEffect, useSeekingEffect, useTimeUpdateEffect, useSeekedEffect, usePauseEffect, useWaitingEffect, useErrorEffect, useEndEffect } from 'video-react-hooks';
 import VideoJS from './VideoJS';
 
 const App = () => {
   const [stateEvent, setStateEvent] = useState<string>();
 
-  const playerRef = useRef<any>();
+  const playerRef = useRef<MutableRefObject<any>>();
 
   useReadyEffect(() => {
     console.log('useReadyEffect');

@@ -1,8 +1,8 @@
 {
   "name": "video-react-hooks",
   "version": "0.10.7",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "dependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
@@ -30,7 +30,12 @@
     "react",
     "hooks",
     "events",
-    "videojs"
+    "effects",
+    "video",
+    "videojs",
+    "javascript",
+    "mp4",
+    "hls"
   ],
   "author": "David Kern",
   "devDependencies": {
