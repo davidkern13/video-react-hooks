@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc && cp tsconfig.json dist/tsconfig.json && cp -R @types dist/@types",
+    "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
