@@ -2,7 +2,7 @@
 
 <p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
-<p align="center">![](https://img.shields.io/npm/dw/video-react-hooks?style=flat-square) ![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)</p>
+<div align="center">![](https://img.shields.io/npm/dw/video-react-hooks?style=flat-square) ![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)</div>
 
 
 # Why
