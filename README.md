@@ -4,8 +4,6 @@
 
 ![](https://img.shields.io/npm/dw/video-react-hooks?style=flat-square) ![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)
 
-| ![](https://img.shields.io/npm/dw/video-react-hooks?style=flat-square) |
-| :--: |
 
 # Why
 
@@ -57,20 +55,90 @@ export const VideoComponent = () => {
 
 ```
 
-### Hooks.
+### API Details
 
-| Hook | Execution |
-| ------------- | ------------- |
-| ```useReadyEffect``` |  video is initialize |
-| ```usePlayingEffect``` |  video is playing |
-| ```usePauseEffect``` |  video is paused |
-| ```useWaitingEffect``` | video is waiting |
-| ```useSeekingEffect``` |  video is seeking |
-| ```useSeekedEffect``` | video is seeked |
-| ```useTimeUpdateEffect``` | run once per frame |
-| ```useEndEffect``` | video is ended |
-| ```useErrorEffect``` | error occur |
-| ```useVolumeChangeEffect``` | volume change |
+```JavaScript
+import { useReadyEffect } from 'video-react-hooks';
+
+useReadyEffect(() => {
+  //executed when video is ready
+}, []);
+```
+
+```JavaScript
+import { usePlayingEffect } from 'video-react-hooks';
+
+usePlayingEffect(() => {
+  //executed when video is playing
+}, []);
+```
+
+```JavaScript
+import { usePauseEffect } from 'video-react-hooks';
+
+usePauseEffect(() => {
+  //executed when video is paused
+}, []);
+```
+
+```JavaScript
+import { useWaitingEffect } from 'video-react-hooks';
+
+useWaitingEffect(() => {
+  //executed when video is waiting
+}, []);
+```
+
+```JavaScript
+import { useSeekingEffect } from 'video-react-hooks';
+
+useSeekingEffect(() => {
+  //executed when video is seeking
+}, []);
+```
+
+```JavaScript
+import { useSeekedEffect } from 'video-react-hooks';
+
+useSeekedEffect(() => {
+  //executed when video is seeked
+}, []);
+```
+
+```JavaScript
+import { useTimeUpdateEffect } from 'video-react-hooks';
+
+useTimeUpdateEffect(() => {
+  //executed when video is timeupdate event executed
+  //this hooks run run once per frame
+  //here you can calculation oun time
+}, []);
+```
+
+```JavaScript
+import { useEndEffect } from 'video-react-hooks';
+
+useEndEffect(() => {
+  //executed when video is ended
+  //suit for hls(vod) or mp4 video
+}, []);
+```
+
+```JavaScript
+import { useErrorEffect } from 'video-react-hooks';
+
+useErrorEffect(() => {
+  //executed when video error event occur
+}, []);
+```
+
+```JavaScript
+import { useVolumeChangeEffect } from 'video-react-hooks';
+
+useVolumeChangeEffect(() => {
+  //executed when video volume change
+}, []);
+```
 
 
 ### Testing hooks with video type.
