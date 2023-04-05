@@ -122,6 +122,7 @@ useSeekedEffect(() => {
 ```
 
 **useTimeUpdateEffect** - executed when video is timeupdate event executed
+<br>
 <sub>this hooks executed once per frame</sub>
 
 ```JavaScript
@@ -133,6 +134,7 @@ useTimeUpdateEffect(() => {
 ```
 
 **useEndEffect** - executed when video is ended
+<br>
 <sub>executed for hls(vod) or mp4 video</sub>
 
 ```JavaScript
@@ -153,8 +155,8 @@ useErrorEffect(() => {
 }, []);
 ```
 
-**useErrorEffect** - executed when video volume change
-
+**useVolumeChangeEffect** - executed when video volume change
+<br>
 <sub>@param: e - to get value of volume when hook executed</sub>
 
 ```JavaScript
