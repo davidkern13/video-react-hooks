@@ -5,7 +5,7 @@
 # Why
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
-This makes makes not readable code and difficult to maintain. video-react-hooks represent video events in hooks shape, possible to use across the application in component of video or other components that need to be affected by the video events.
+This makes makes not readable code and difficult to maintain. ```video-react-hooks``` represent ```video``` events in ```hooks``` shape, possible to use across the application in component of video or other components that need to be affected by the ```video``` events.
 
 ### Info
 
@@ -21,7 +21,7 @@ npm install --save video-react-hooks
 
 # Usage Example
 
-Each hook based on video event and executed when suitable event will fire, the hooks will executed after video will initialized instead of execute hook after render like react do, but under the hood video-react-hooks also used the react hooks.
+Each hook based on ```vide``o event and executed when suitable event will fire, the hooks will executed after video will initialized instead of execute hook after render like react do, but under the hood ```video-react-hooks``` also used the ```react hooks```.
 
 [Check Live Example](https://codesandbox.io/s/video-react-hooks-n9bu3d)
 
