@@ -5,7 +5,7 @@
 # Why
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
-This makes makes not readable code and difficult to maintain. video-react-hooks represent video events in hooks shape, possible to use across the application in component of video or other components that need to be affected by the video events.
+This makes makes not readable code and difficult to maintain. ```video-react-hooks``` represent a ```video``` events in ```hooks``` shape, possible to use across the application in components of video that need to be affected by the ```video``` events.
 
 ### Info
 
@@ -21,7 +21,7 @@ npm install --save video-react-hooks
 
 # Usage Example
 
-Each hook based on video event and executed when suitable event will fire, the hooks will executed after video will initialized instead of execute hook after render like react do, but under the hood video-react-hooks also used the react hooks.
+Each hook based on ```video``` event and executed when suitable event will fire, the hooks will executed after video will initialized instead of execute hook after render like react do, but under the hood ```video-react-hooks``` also used the ```react hooks```.
 
 [Check Live Example](https://codesandbox.io/s/video-react-hooks-n9bu3d)
 
@@ -61,7 +61,7 @@ export const VideoComponent = () => {
 # API Details
 
 
-### useReadyEffect - executed when video is ready
+**useReadyEffect** - executed when video is ready
 
 ```JavaScript
 import { useReadyEffect } from 'video-react-hooks';
@@ -71,7 +71,7 @@ useReadyEffect(() => {
 }, []);
 ```
 
-### usePlayingEffect - executed when video is playing
+**usePlayingEffect** - executed when video is playing
 
 ```JavaScript
 import { usePlayingEffect } from 'video-react-hooks';
@@ -81,7 +81,7 @@ usePlayingEffect(() => {
 }, []);
 ```
 
-### usePauseEffect - executed when video is paused
+**usePauseEffect** - executed when video is paused
 
 ```JavaScript
 import { usePauseEffect } from 'video-react-hooks';
@@ -91,7 +91,7 @@ usePauseEffect(() => {
 }, []);
 ```
 
-### usePauseEffect - executed when video is waiting
+**usePauseEffect** - executed when video is waiting
 
 ```JavaScript
 import { useWaitingEffect } from 'video-react-hooks';
@@ -101,7 +101,7 @@ useWaitingEffect(() => {
 }, []);
 ```
 
-### useSeekingEffect - executed when video is seeking
+**useSeekingEffect** - executed when video is seeking
 
 ```JavaScript
 import { useSeekingEffect } from 'video-react-hooks';
@@ -111,7 +111,7 @@ useSeekingEffect(() => {
 }, []);
 ```
 
-### useSeekedEffect - executed when video is seeked
+**useSeekedEffect** - executed when video is seeked
 
 ```JavaScript
 import { useSeekedEffect } from 'video-react-hooks';
@@ -121,8 +121,8 @@ useSeekedEffect(() => {
 }, []);
 ```
 
-### useTimeUpdateEffect - executed when video is timeupdate event executed
-*this hooks executed once per frame
+**useTimeUpdateEffect** - executed when video is timeupdate event executed
+<sub>this hooks executed once per frame</sub>
 
 ```JavaScript
 import { useTimeUpdateEffect } from 'video-react-hooks';
@@ -132,8 +132,8 @@ useTimeUpdateEffect(() => {
 }, []);
 ```
 
-### useEndEffect - executed when video is ended
-*executed for hls(vod) or mp4 video
+**useEndEffect** - executed when video is ended
+<sub>executed for hls(vod) or mp4 video</sub>
 
 ```JavaScript
 import { useEndEffect } from 'video-react-hooks';
@@ -143,7 +143,7 @@ useEndEffect(() => {
 }, []);
 ```
 
-### useErrorEffect - executed when video error event occur
+**useErrorEffect** - executed when video error event occur
 
 ```JavaScript
 import { useErrorEffect } from 'video-react-hooks';
@@ -153,7 +153,7 @@ useErrorEffect(() => {
 }, []);
 ```
 
-### useErrorEffect - executed when video volume change
+**useErrorEffect** - executed when video volume change
 
 ```JavaScript
 import { useVolumeChangeEffect } from 'video-react-hooks';
@@ -162,8 +162,7 @@ useVolumeChangeEffect(() => {
   //code here
 }, []);
 ```
-
-
+  
 ### Testing hooks with video type.
 
 | HLS(LIVE) | HLS(VOD) | MP4 |
