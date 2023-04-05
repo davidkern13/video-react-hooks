@@ -2,7 +2,8 @@
 
 <p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
-![](https://img.shields.io/npm/dw/video-react-hooks?style=flat-square) ![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)
+<p align="center">![](https://img.shields.io/npm/dw/video-react-hooks?style=flat-square) </p>
+<p align="center">![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)</p>
 
 
 # Why
@@ -55,88 +56,108 @@ export const VideoComponent = () => {
 
 ```
 
-### API Details
+# API Details
+
+
+### useReadyEffect - executed when video is ready
 
 ```JavaScript
 import { useReadyEffect } from 'video-react-hooks';
 
 useReadyEffect(() => {
-  //executed when video is ready
+  //code here
 }, []);
 ```
+
+### usePlayingEffect - executed when video is playing
 
 ```JavaScript
 import { usePlayingEffect } from 'video-react-hooks';
 
 usePlayingEffect(() => {
-  //executed when video is playing
+  //code here
 }, []);
 ```
+
+### usePauseEffect - executed when video is paused
 
 ```JavaScript
 import { usePauseEffect } from 'video-react-hooks';
 
 usePauseEffect(() => {
-  //executed when video is paused
+  //code here
 }, []);
 ```
+
+### usePauseEffect - executed when video is waiting
 
 ```JavaScript
 import { useWaitingEffect } from 'video-react-hooks';
 
 useWaitingEffect(() => {
-  //executed when video is waiting
+  //code here
 }, []);
 ```
+
+### useSeekingEffect - executed when video is seeking
 
 ```JavaScript
 import { useSeekingEffect } from 'video-react-hooks';
 
 useSeekingEffect(() => {
-  //executed when video is seeking
+  //code here
 }, []);
 ```
+
+### useSeekedEffect - executed when video is seeked
 
 ```JavaScript
 import { useSeekedEffect } from 'video-react-hooks';
 
 useSeekedEffect(() => {
-  //executed when video is seeked
+  //code here
 }, []);
 ```
+
+### useTimeUpdateEffect - executed when video is timeupdate event executed
+*this hooks executed once per frame
 
 ```JavaScript
 import { useTimeUpdateEffect } from 'video-react-hooks';
 
 useTimeUpdateEffect(() => {
-  //executed when video is timeupdate event executed
-  //this hooks run run once per frame
-  //here you can calculation oun time
+  //code here
 }, []);
 ```
+
+### useEndEffect - executed when video is ended
+*executed for hls(vod) or mp4 video
 
 ```JavaScript
 import { useEndEffect } from 'video-react-hooks';
 
 useEndEffect(() => {
-  //executed when video is ended
-  //suit for hls(vod) or mp4 video
+  //code here
 }, []);
 ```
+
+### useErrorEffect - executed when video error event occur
 
 ```JavaScript
 import { useErrorEffect } from 'video-react-hooks';
 
 useErrorEffect(() => {
-  //executed when video error event occur
+  //code here
 }, []);
 ```
+
+### useErrorEffect - executed when video volume change
 
 ```JavaScript
 import { useVolumeChangeEffect } from 'video-react-hooks';
 
 useVolumeChangeEffect(() => {
-  //executed when video volume change
+  //code here
 }, []);
 ```
 
