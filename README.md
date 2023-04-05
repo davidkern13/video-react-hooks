@@ -4,10 +4,13 @@
 
 
 <center>
-:---:
-![](https://img.shields.io/npm/dt/video-react-hooks?style=flat-square)
+
+  <table align="center">
+  ![](https://img.shields.io/npm/dt/video-react-hooks?style=flat-square)
 ![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)
-:---:
+  </table>
+
+
 </center>
 
 
