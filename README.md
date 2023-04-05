@@ -163,7 +163,8 @@ useVolumeChangeEffect(() => {
 }, []);
 ```
 
-
+### Support ```<video>``` element
+  
 ### Testing hooks with video type.
 
 | HLS(LIVE) | HLS(VOD) | MP4 |
