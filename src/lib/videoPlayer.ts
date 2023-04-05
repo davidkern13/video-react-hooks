@@ -100,6 +100,9 @@ class VideoPlayer {
   getDuration(): Nullable<number> {
     return this.video && this.video.duration;
   }
+  getVolume(): Nullable<number> {
+    return this.video && this.video.volume;
+  }
 }
 
 export const videoPlayer = new VideoPlayer();

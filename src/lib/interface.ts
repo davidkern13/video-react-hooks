@@ -1,5 +1,5 @@
 interface MethodProp<T> {
-  (): T;
+  (event?: any): T;
 }
 
 interface DepsProp {
@@ -16,11 +16,15 @@ export interface IListener {
 
 export interface IQueQue extends DepsProp {
   callback: MethodProp<void>;
+  event?: any;
 }
 
 export interface ICreateEffect {
-  (): void;
+  (e?: TVolumeEffect): any;
 }
 export interface IDepsEffect {
   deps: Array<any> | void | null;
 }
+export type TVolumeEffect = {
+  volume: number | null;
+};

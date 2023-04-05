@@ -4,13 +4,13 @@ class DispatcherHooks {
   private isDispatching: boolean = false;
   private previousDeps: any = [];
 
-  enqueue = ({ callback, deps }: IQueQue) => {
+  enqueue = ({ callback, deps, event }: IQueQue) => {
     const isMount = this.previousDeps.length === 0;
     const hasChangedDeps =
       !isMount && !this.compareDeps(this.previousDeps, deps);
 
     if (isMount || hasChangedDeps) {
-      const task = { callback, deps };
+      const task = { callback, deps, event };
       this.queue.push(task);
 
       this.previousDeps = deps;
@@ -48,6 +48,7 @@ class DispatcherHooks {
       const queuedCallback = this.queue[0];
       const callback = queuedCallback.callback;
       const deps = queuedCallback.deps;
+      const event = queuedCallback?.event || undefined;
 
       if (callback.toString() === "() => {}") {
         this.queue.shift();
@@ -55,7 +56,7 @@ class DispatcherHooks {
       }
 
       try {
-        callback();
+        callback(event);
       } catch (error) {
         console.error("Error occurred while executing task:", error);
       }

@@ -1,3 +1,5 @@
+export type { TVolumeEffect } from './interface';
+
 export { useReadyEffect } from "./hooks/useReadyEffect";
 export { usePauseEffect } from "./hooks/usePauseEffect";
 export { usePlayingEffect } from "./hooks/usePlayingEffect";
