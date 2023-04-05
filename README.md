@@ -5,7 +5,7 @@
 # Why
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
-This makes makes not readable code and difficult to maintain. ```video-react-hooks``` represent a ```video``` events in ```hooks``` shape, possible to use across the application in component of video or other components that need to be affected by the ```video``` events.
+This makes makes not readable code and difficult to maintain. ```video-react-hooks``` represent a ```video``` events in ```hooks``` shape, possible to use across the application in components of video or components that need to be affected by the ```video``` events.
 
 ### Info
 
