@@ -61,7 +61,7 @@ export const VideoComponent = () => {
 # API Details
 
 
-### useReadyEffect - executed when video is ready
+**useReadyEffect** - executed when video is ready
 
 ```JavaScript
 import { useReadyEffect } from 'video-react-hooks';
@@ -71,7 +71,7 @@ useReadyEffect(() => {
 }, []);
 ```
 
-### usePlayingEffect - executed when video is playing
+**usePlayingEffect** - executed when video is playing
 
 ```JavaScript
 import { usePlayingEffect } from 'video-react-hooks';
@@ -81,7 +81,7 @@ usePlayingEffect(() => {
 }, []);
 ```
 
-### usePauseEffect - executed when video is paused
+**usePauseEffect** - executed when video is paused
 
 ```JavaScript
 import { usePauseEffect } from 'video-react-hooks';
@@ -91,7 +91,7 @@ usePauseEffect(() => {
 }, []);
 ```
 
-### usePauseEffect - executed when video is waiting
+**usePauseEffect** - executed when video is waiting
 
 ```JavaScript
 import { useWaitingEffect } from 'video-react-hooks';
@@ -101,7 +101,7 @@ useWaitingEffect(() => {
 }, []);
 ```
 
-### useSeekingEffect - executed when video is seeking
+**useSeekingEffect** - executed when video is seeking
 
 ```JavaScript
 import { useSeekingEffect } from 'video-react-hooks';
@@ -111,7 +111,7 @@ useSeekingEffect(() => {
 }, []);
 ```
 
-### useSeekedEffect - executed when video is seeked
+**useSeekedEffect** - executed when video is seeked
 
 ```JavaScript
 import { useSeekedEffect } from 'video-react-hooks';
@@ -121,8 +121,8 @@ useSeekedEffect(() => {
 }, []);
 ```
 
-### useTimeUpdateEffect - executed when video is timeupdate event executed
-*this hooks executed once per frame
+**useTimeUpdateEffect** - executed when video is timeupdate event executed
+<sub>this hooks executed once per frame</sub>
 
 ```JavaScript
 import { useTimeUpdateEffect } from 'video-react-hooks';
@@ -132,8 +132,8 @@ useTimeUpdateEffect(() => {
 }, []);
 ```
 
-### useEndEffect - executed when video is ended
-*executed for hls(vod) or mp4 video
+**useEndEffect** - executed when video is ended
+<sub>executed for hls(vod) or mp4 video</sub>
 
 ```JavaScript
 import { useEndEffect } from 'video-react-hooks';
@@ -143,7 +143,7 @@ useEndEffect(() => {
 }, []);
 ```
 
-### useErrorEffect - executed when video error event occur
+**useErrorEffect** - executed when video error event occur
 
 ```JavaScript
 import { useErrorEffect } from 'video-react-hooks';
@@ -153,7 +153,7 @@ useErrorEffect(() => {
 }, []);
 ```
 
-### useErrorEffect - executed when video volume change
+**useErrorEffect** - executed when video volume change
 
 ```JavaScript
 import { useVolumeChangeEffect } from 'video-react-hooks';
@@ -162,8 +162,6 @@ useVolumeChangeEffect(() => {
   //code here
 }, []);
 ```
-
-### Support ```<video>``` element
   
 ### Testing hooks with video type.
 
