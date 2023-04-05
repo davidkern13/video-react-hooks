@@ -2,6 +2,9 @@
 
 <p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
+![](https://img.shields.io/npm/dw/video-react-hooks?style=flat-square)![] (https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)
+
+
 # Why
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
