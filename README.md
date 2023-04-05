@@ -167,7 +167,9 @@ useVolumeChangeEffect((e) => {
 ### Types.
 
 | Event | Type | Hook | Description |
+| ------------- | ------------- | ------------- | ------------- |
 | e | TErrorEffect | useErrorEffect | value of error |
+| ------------- | ------------- | ------------- | ------------- |
 | e | TVolumeEffect | useVolumeChangeEffect | value of volume change |
 
 
