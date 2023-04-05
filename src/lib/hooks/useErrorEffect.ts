@@ -1,18 +1,28 @@
 import React, { useEffect, useCallback } from "react";
 import { dispatcher } from "../dispatcher";
 import { videoPlayer } from "../videoPlayer";
-import { ICreateEffect, IDepsEffect } from "../interface";
+import {
+  ICreateEffect,
+  TErrorEffect,
+  IDepsEffect,
+  Nullable,
+} from "../interface";
 
 export function useErrorEffect(
   create: ICreateEffect,
   deps: IDepsEffect | never[]
 ) {
-  const callback = useCallback(() => {
-    return create();
-  }, [create]);
+  const callback = useCallback(
+    (e?: TErrorEffect | undefined) => {
+      return create(e);
+    },
+    [create]
+  );
 
   const registerListener = useCallback(() => {
-    dispatcher.enqueue({ callback, deps });
+    const error: Nullable<TErrorEffect> = videoPlayer.getError();
+
+    dispatcher.enqueue({ callback, deps, event: error });
   }, [callback, deps]);
 
   const listenerProps = {

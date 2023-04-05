@@ -1,7 +1,12 @@
 import React, { useEffect, useCallback } from "react";
 import { dispatcher } from "../dispatcher";
 import { videoPlayer } from "../videoPlayer";
-import { ICreateEffect, IDepsEffect, TVolumeEffect } from "../interface";
+import {
+  ICreateEffect,
+  IDepsEffect,
+  TVolumeEffect,
+  Nullable,
+} from "../interface";
 
 export function useVolumeChangeEffect(
   create: ICreateEffect,
@@ -15,9 +20,10 @@ export function useVolumeChangeEffect(
   );
 
   const registerListener = useCallback(() => {
-    const volumeVal: number | null = videoPlayer.getVolume();
-    const e: TVolumeEffect = { volume: volumeVal };
-    dispatcher.enqueue({ callback, deps, event: e });
+    const volumeVal: Nullable<number> = videoPlayer.getVolume();
+    const volume: Nullable<TVolumeEffect> = { volume: volumeVal };
+
+    dispatcher.enqueue({ callback, deps, event: volume });
   }, [callback, deps]);
 
   const listenerProps = {

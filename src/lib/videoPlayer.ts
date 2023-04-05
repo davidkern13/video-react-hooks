@@ -1,4 +1,4 @@
-import { IListener, Nullable } from './interface';
+import { IListener, TErrorEffect, Nullable } from "./interface";
 class VideoPlayer {
   video: Nullable<HTMLVideoElement> = null;
   status: Nullable<string> = null;
@@ -102,6 +102,9 @@ class VideoPlayer {
   }
   getVolume(): Nullable<number> {
     return this.video && this.video.volume;
+  }
+  getError(): Nullable<TErrorEffect> {
+    return this.video && this.video.error;
   }
 }
 

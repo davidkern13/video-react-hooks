@@ -1,4 +1,4 @@
-export type { TVolumeEffect } from './interface';
+export type { TErrorEffect, TVolumeEffect } from "./interface";
 
 export { useReadyEffect } from "./hooks/useReadyEffect";
 export { usePauseEffect } from "./hooks/usePauseEffect";

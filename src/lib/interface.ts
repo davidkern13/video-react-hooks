@@ -20,11 +20,17 @@ export interface IQueQue extends DepsProp {
 }
 
 export interface ICreateEffect {
-  (e?: TVolumeEffect): any;
+  (e?: TVolumeEffect | TErrorEffect): any;
 }
 export interface IDepsEffect {
   deps: Array<any> | void | null;
 }
+
 export type TVolumeEffect = {
   volume: number | null;
+};
+
+export type TErrorEffect = {
+  code: number;
+  message: string;
 };

@@ -11,6 +11,7 @@ import {
   useErrorEffect,
   useEndEffect,
   useVolumeChangeEffect,
+  TErrorEffect,
   TVolumeEffect,
 } from "video-react-hooks";
 
@@ -51,8 +52,8 @@ const App = () => {
     console.log("useTimeUpdateEffect");
   }, []);
 
-  useErrorEffect(() => {
-    console.log("useErrorEffect");
+  useErrorEffect((e?: TErrorEffect) => {
+    console.log("useErrorEffect", e);
   }, []);
 
   useEndEffect(() => {

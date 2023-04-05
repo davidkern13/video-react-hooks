@@ -60,7 +60,6 @@ export const VideoComponent = () => {
 
 # API Details
 
-
 **useReadyEffect** - executed when video is ready
 
 ```JavaScript
@@ -148,21 +147,29 @@ useEndEffect(() => {
 ```JavaScript
 import { useErrorEffect } from 'video-react-hooks';
 
-useErrorEffect(() => {
+useErrorEffect((e) => {
   //code here
 }, []);
 ```
 
-**useErrorEffect** - executed when video volume change
+**useVolumeChangeEffect** - executed when video volume change
 
 ```JavaScript
 import { useVolumeChangeEffect } from 'video-react-hooks';
 
-useVolumeChangeEffect(() => {
+useVolumeChangeEffect((e) => {
   //code here
 }, []);
 ```
-  
+
+### Types.
+
+| Event | Type | Hook | Description |
+| ------------- | ------------- | ------------- | ------------- |
+| e | TErrorEffect | useErrorEffect | value of error |
+| e | TVolumeEffect | useVolumeChangeEffect | value of volume change |
+
+
 ### Testing hooks with video type.
 
 | HLS(LIVE) | HLS(VOD) | MP4 |
