@@ -2,24 +2,15 @@
 
 <p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
-
-<center>
-
-  <table align="center">
-  ![](https://img.shields.io/npm/dt/video-react-hooks?style=flat-square)
-![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)
-  </table>
-
-
-</center>
-
-
-
-
 # Why
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
 This makes makes not readable code and difficult to maintain. video-react-hooks represent video events in hooks shape, possible to use across the application in component of video or other components that need to be affected by the video events.
+
+# Info
+
+![](https://img.shields.io/npm/dt/video-react-hooks?style=flat-square)
+![](https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square)
 
 # Instalation
 
