@@ -155,10 +155,12 @@ useErrorEffect(() => {
 
 **useErrorEffect** - executed when video volume change
 
-```JavaScript
-import { useVolumeChangeEffect } from 'video-react-hooks';
+<sub>@param: e - to get value of volume when hook executed</sub>
 
-useVolumeChangeEffect(() => {
+```JavaScript
+import { useVolumeChangeEffect, TVolumeEffect } from 'video-react-hooks';
+
+useVolumeChangeEffect((e?: TVolumeEffect) => {
   //code here
 }, []);
 ```
