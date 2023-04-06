@@ -20,7 +20,7 @@ export interface IQueQue extends DepsProp {
 }
 
 export interface ICreateEffect {
-  (e?: TVolumeEffect | TErrorEffect): any;
+  (e?: any): any;
 }
 export interface IDepsEffect {
   deps: Array<any> | void | null;

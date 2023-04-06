@@ -167,7 +167,7 @@ useVolumeChangeEffect((e) => {
 
 ### Types
 
-
+<br>
 | Event | Type | Hook | Description |
 | ------------- | ------------- | ------------- | ------------- |
 | e | TErrorEffect | useErrorEffect | value of error |
@@ -176,7 +176,7 @@ useVolumeChangeEffect((e) => {
 
 ### Testing hooks with video type.
 
-
+<br>
 | HLS(LIVE) | HLS(VOD) | MP4 |
 | ------------- | ------------- | ------------- |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
