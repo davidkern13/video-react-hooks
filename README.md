@@ -165,7 +165,8 @@ useVolumeChangeEffect((e) => {
 }, []);
 ```
 
-### Types.
+### Types
+
 
 | Event | Type | Hook | Description |
 | ------------- | ------------- | ------------- | ------------- |
@@ -174,6 +175,7 @@ useVolumeChangeEffect((e) => {
 
 
 ### Testing hooks with video type.
+
 
 | HLS(LIVE) | HLS(VOD) | MP4 |
 | ------------- | ------------- | ------------- |
