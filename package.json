@@ -1,6 +1,6 @@
 {
   "name": "video-react-hooks",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "main": "dist/index.js",
   "types": "dist/video-react-hooks.d.ts",
   "description": "video-react-hooks represents video events in the form of React hooks",
