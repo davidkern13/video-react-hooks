@@ -2,7 +2,7 @@
 
 <p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
-# Why
+# Purpose
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
 This makes makes not readable code and difficult to maintain. ```video-react-hooks``` represent a ```video``` events in ```hooks``` shape, possible to use across the application in components of video that need to be affected by the ```video``` events.
