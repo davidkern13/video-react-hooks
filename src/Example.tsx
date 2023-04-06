@@ -107,16 +107,10 @@ const App = () => {
   };
 
   return (
-    <div
-      className="live"
-      style={{ width: "100%", height: "1200px" }}
-    >
-      <VideoJS
-        options={videoJsOptions}
-        onReady={handlePlayerReady}
-      />
+    <div style={{ width: '100%', height: '1200px' }}>
+      <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
     </div>
-  );
+  )
 };
 
 export default App;

@@ -20,10 +20,9 @@ export function useVolumeChangeEffect(
   );
 
   const registerListener = useCallback(() => {
-    const volumeVal: Nullable<number> = videoPlayer.getVolume();
-    const volume: Nullable<TVolumeEffect> = { volume: volumeVal };
+    const getVolume: Nullable<number> = videoPlayer.getVolume()
 
-    dispatcher.enqueue({ callback, deps, event: volume });
+    dispatcher.enqueue({ callback, deps, event: { volume: getVolume } })
   }, [callback, deps]);
 
   const listenerProps = {

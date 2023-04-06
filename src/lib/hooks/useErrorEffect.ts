@@ -13,7 +13,7 @@ export function useErrorEffect(
   deps: IDepsEffect | never[]
 ) {
   const callback = useCallback(
-    (e?: TErrorEffect | undefined) => {
+    (e?: TErrorEffect) => {
       return create(e);
     },
     [create]
