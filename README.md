@@ -2,6 +2,10 @@
 
 <p align="middle" dir="auto">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
+<p align="middle" dir="auto">
+<a href="https://www.npmjs.com/package/video-react-hooks" rel="nofollow"><img src="https://img.shields.io/npm/dt/video-react-hooks?style=flat-square" alt="npm version" data-canonical-src="" style="max-width: 100%;"></a>
+</p>
+
 # Purpose
 
 Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
