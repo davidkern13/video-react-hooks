@@ -91,7 +91,7 @@ usePauseEffect(() => {
 }, []);
 ```
 
-**usePauseEffect** - executed when video is waiting
+**useWaitingEffect** - executed when video is waiting
 
 ```JavaScript
 import { useWaitingEffect } from 'video-react-hooks';
