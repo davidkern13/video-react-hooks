@@ -22,7 +22,7 @@ npm install --save video-react-hooks
 
 # Usage Example
 
-Each hook built on the concept of React hooks, and each hook is based on a specific video event. These hooks are executed when the corresponding event occurs during video playback, instead of execute hook after render. Under the hood video-react-hooks also used React hooks.
+Each hook built on the concept of React hooks, and each hook is based on a specific video event. These hooks are executed when the corresponding event occurs during video playback. Under the hood video-react-hooks also used React hooks.
 
 [Check Live Example](https://codesandbox.io/s/video-react-hooks-n9bu3d)
 
