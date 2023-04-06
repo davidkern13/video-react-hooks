@@ -165,7 +165,6 @@ useVolumeChangeEffect((e) => {
 }, []);
 ```
 
-<br>
 
 ### Types
 
@@ -175,7 +174,6 @@ useVolumeChangeEffect((e) => {
 | e | TErrorEffect | useErrorEffect | value of error |
 | e | TVolumeEffect | useVolumeChangeEffect | value of volume change |
 
-<br>
 
 ### Testing hooks with video type.
 
