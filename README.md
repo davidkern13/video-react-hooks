@@ -7,7 +7,7 @@
 <a href="https://www.npmjs.com/package/video-react-hooks" rel="nofollow"><img src="https://img.shields.io/github/languages/code-size/davidkern13/video-react-hooks?color=green&style=flat-square" alt="npm version" data-canonical-src="" style="max-width: 100%;"></a>
 <a href="https://www.npmjs.com/package/video-react-hooks" rel="nofollow"><img src="https://img.shields.io/badge/-javascript-yellow?style=flat-square" alt="npm version" data-canonical-src="" style="max-width: 100%;"></a>
 <a href="https://www.npmjs.com/package/video-react-hooks" rel="nofollow"><img src="https://img.shields.io/badge/react-blue?style=flat-square" alt="npm version" data-canonical-src="" style="max-width: 100%;"></a>
-<a href="https://www.npmjs.com/package/video-react-hooks" rel="nofollow"><img src="https://img.shields.io/badge/react-blue?style=flat-square?labelColor=abcdef" alt="npm version" data-canonical-src="" style="max-width: 100%;"></a>
+<a href="https://www.npmjs.com/package/video-react-hooks" rel="nofollow"><img src="https://img.shields.io/badge/react?style=flat-square?labelColor=abcdef" alt="npm version" data-canonical-src="" style="max-width: 100%;"></a>
 </p>
 
 # Purpose
