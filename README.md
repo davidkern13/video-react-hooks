@@ -1,6 +1,6 @@
 <img src="https://i.ibb.co/CzzMNM7/video-react-1.jpg" style="max-width: 100%;">
 
-<p align="middle" dir="auto">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
+<p align="middle" dir="auto">video-react-hooks represents video events in the form of React hooks</p>
 
 <p align="middle" dir="auto">
 <a href="https://www.npmjs.com/package/video-react-hooks" rel="nofollow"><img src="https://img.shields.io/npm/dt/video-react-hooks?style=flat-square" alt="npm version" data-canonical-src="" style="max-width: 100%;"></a>
@@ -12,8 +12,7 @@
 
 # Purpose
 
-Certain situations can make our development as difficult like updates events of video from different parts of the code without consistency.
-This makes makes not readable code and difficult to maintain. ```video-react-hooks``` represent a ```video``` events in ```hooks``` shape, possible to use across the application in components of video that need to be affected by the ```video``` events.
+Video-react-hooks represents video events in the form of React hooks. By encapsulating the video event logic in hooks. These hooks can then be easily used across the application in components that are affected by the video events. This approach not only simplifies the code but also makes it more readable and maintainable.
 
 # Instalation
 
