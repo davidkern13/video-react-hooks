@@ -1,6 +1,6 @@
-![video-react-hooks](https://i.ibb.co/CzzMNM7/video-react-1.jpg)
+<img src="https://i.ibb.co/CzzMNM7/video-react-1.jpg" style="max-width: 100%;">
 
-<p align="center">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
+<p align="middle" dir="auto">This package suitable for video javascript element. The source written in javascript/typescript/react.</p>
 
 # Purpose
 
