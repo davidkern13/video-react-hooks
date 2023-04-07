@@ -167,6 +167,8 @@ useVolumeChangeEffect((e) => {
 ### Additional Hooks
 
 
+| Hooks |
+| ------------- |
 | useRateChangeEffect |
 | useStalledEffect |
 | useSuspendEffect |
@@ -181,9 +183,10 @@ useVolumeChangeEffect((e) => {
 | e | TVolumeEffect | useVolumeChangeEffect | value of volume change |
 
 
-### Testing hooks with video type
+### Testing
 
-
+| Video Types |
+| ------------- |
 | HLS(LIVE) | HLS(VOD) | MP4 |
 | ------------- | ------------- | ------------- |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
