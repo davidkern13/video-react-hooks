@@ -164,10 +164,9 @@ useVolumeChangeEffect((e) => {
   //code here
 }, []);
 ```
-### Other hooks
+### Additional Hooks
 
 
-| Hooks |
 | ------------- |
 | useRateChangeEffect |
 | useStalledEffect |
