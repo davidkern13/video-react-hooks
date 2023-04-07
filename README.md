@@ -186,7 +186,7 @@ useVolumeChangeEffect((e) => {
 ### Testing
 
 | Video Types |
-| ------------- |
+| ------------- | ------------- | ------------- |
 | HLS(LIVE) | HLS(VOD) | MP4 |
 | ------------- | ------------- | ------------- |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
