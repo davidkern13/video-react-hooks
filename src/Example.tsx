@@ -12,61 +12,61 @@ import {
   useEndEffect,
   useVolumeChangeEffect,
   TErrorEffect,
-  TVolumeEffect,
-} from "video-react-hooks";
+  TVolumeEffect
+} from './lib'
 
-import VideoJS from "./VideoJS";
+import VideoJS from './VideoJS'
 
 const App = () => {
-  const [stateEvent, setStateEvent] = useState<string>();
+  const [stateEvent, setStateEvent] = useState<string>()
 
-  const playerRef = useRef<null>();
+  const playerRef = useRef<null>()
 
   useReadyEffect(() => {
-    console.log("useReadyEffect");
-  }, []);
+    console.log('useReadyEffect')
+  }, [])
 
   useWaitingEffect(() => {
-    console.log("useWaitingEffect");
-  }, []);
+    console.log('useWaitingEffect')
+  }, [])
 
   usePlayingEffect(() => {
-    console.log("usePlayingEffect");
-    setStateEvent("usePlayingEffect");
-  }, []);
+    console.log('usePlayingEffect')
+    setStateEvent('usePlayingEffect')
+  }, [])
 
   usePauseEffect(() => {
-    console.log("usePauseEffect");
-    setStateEvent("usePauseEffect");
-  }, []);
+    console.log('usePauseEffect')
+    setStateEvent('usePauseEffect')
+  }, [])
 
   useSeekingEffect(() => {
-    console.log("useSeekingEffect");
-  }, []);
+    console.log('useSeekingEffect')
+  }, [])
 
   useSeekedEffect(() => {
-    console.log("useSeekedEffect");
-  }, []);
+    console.log('useSeekedEffect')
+  }, [])
 
   useTimeUpdateEffect(() => {
-    console.log("useTimeUpdateEffect");
-  }, []);
+    console.log('useTimeUpdateEffect')
+  }, [])
 
   useErrorEffect((e?: TErrorEffect) => {
-    console.log("useErrorEffect", e);
-  }, []);
+    console.log('useErrorEffect', e)
+  }, [])
 
   useEndEffect(() => {
-    console.log("useEndEffect");
-  }, []);
+    console.log('useEndEffect')
+  }, [])
 
   useVolumeChangeEffect((e?: TVolumeEffect) => {
-    console.log("useVolumeChangeEffect", e);
-  }, []);
+    console.log('useVolumeChangeEffect', e)
+  }, [])
 
   useEffect(() => {
-    console.log("stateEvent", stateEvent);
-  }, [stateEvent]);
+    console.log('stateEvent', stateEvent)
+  }, [stateEvent])
 
   const videoJsOptions = {
     liveui: true,
@@ -74,43 +74,43 @@ const App = () => {
     fluid: true,
     sources: [
       {
-        src: "https://www.w3schools.com/tags/movie.mp4",
-        type: "video/mp4",
-      },
-    ],
-  };
+        src: 'https://www.w3schools.com/tags/movie.mp4',
+        type: 'video/mp4'
+      }
+    ]
+  }
 
   const handlePlayerReady = (player: any) => {
-    playerRef.current = player;
+    playerRef.current = player
 
-    console.log("playerRef.current", playerRef.current);
+    console.log('playerRef.current', playerRef.current)
 
-    player.on("waiting", () => {
-      console.log("player is waiting");
-    });
-    player.on("play", () => {
-      console.log("player is play");
-    });
-    player.on("pause", () => {
-      console.log("player is pause");
-    });
-    player.on("seeking", () => {
-      console.log("player is seeking");
-    });
-    player.on("seeked", () => {
-      console.log("player is seeked");
-    });
+    player.on('waiting', () => {
+      console.log('player is waiting')
+    })
+    player.on('play', () => {
+      console.log('player is play')
+    })
+    player.on('pause', () => {
+      console.log('player is pause')
+    })
+    player.on('seeking', () => {
+      console.log('player is seeking')
+    })
+    player.on('seeked', () => {
+      console.log('player is seeked')
+    })
 
-    player.on("dispose", () => {
-      console.log("player will dispose");
-    });
-  };
+    player.on('dispose', () => {
+      console.log('player will dispose')
+    })
+  }
 
   return (
     <div style={{ width: '100%', height: '1200px' }}>
       <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
     </div>
   )
-};
+}
 
 export default App;

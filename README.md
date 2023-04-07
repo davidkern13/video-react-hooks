@@ -164,7 +164,15 @@ useVolumeChangeEffect((e) => {
   //code here
 }, []);
 ```
+### Other hooks
 
+
+| Hooks |
+| ------------- |
+| useRateChangeEffect |
+| useStalledEffect |
+| useSuspendEffect |
+| useAbortEffect |
 
 ### Types
 
@@ -175,7 +183,7 @@ useVolumeChangeEffect((e) => {
 | e | TVolumeEffect | useVolumeChangeEffect | value of volume change |
 
 
-### Testing hooks with video type.
+### Testing hooks with video type
 
 
 | HLS(LIVE) | HLS(VOD) | MP4 |

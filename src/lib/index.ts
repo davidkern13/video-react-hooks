@@ -10,3 +10,7 @@ export { useWaitingEffect } from "./hooks/useWaitingEffect";
 export { useErrorEffect } from "./hooks/useErrorEffect";
 export { useEndEffect } from "./hooks/useEndEffect";
 export { useVolumeChangeEffect } from "./hooks/useVolumeChangeEffect";
+export { useRateChangeEffect } from "./hooks/useRateChangeEffect";
+export { useStalledEffect } from "./hooks/useStalledEffect";
+export { useSuspendEffect } from "./hooks/useSuspendEffect";
+export { useAbortEffect } from "./hooks/useAbortEffect";
