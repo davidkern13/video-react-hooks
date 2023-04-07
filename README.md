@@ -164,11 +164,9 @@ useVolumeChangeEffect((e) => {
   //code here
 }, []);
 ```
-### Additional Hooks
 
-
-| Hooks |
-| ------------- |
+| Available Hooks |
+| --------------- |
 | useRateChangeEffect |
 | useStalledEffect |
 | useSuspendEffect |
@@ -177,10 +175,10 @@ useVolumeChangeEffect((e) => {
 ### Types
 
 
-| Event | Type | Hook | Description |
-| --- | --- | --- | --- |
-| `e` | `TErrorEffect` | `useErrorEffect` | Value of error |
-| `e` | `TVolumeEffect` | `useVolumeChangeEffect` | Value of volume change |
+| Event | Type            | Hook                 | Description        |
+| ---   | :---            | :--                  | ---                |
+| `e`   | `TErrorEffect`  | `useErrorEffect`     | Value of error     |
+| `e`   | `TVolumeEffect` | `useVolumeChangeEffect` | Value of volume change |
 
 ### Testing
 
