@@ -13,7 +13,7 @@ import {
   useVolumeChangeEffect,
   TErrorEffect,
   TVolumeEffect
-} from './lib'
+} from 'video-react-hooks'
 
 import VideoJS from './VideoJS'
 
