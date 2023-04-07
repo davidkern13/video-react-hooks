@@ -167,10 +167,10 @@ useVolumeChangeEffect((e) => {
 
 | Available Hooks |
 | --------------- |
-| useRateChangeEffect |
-| useStalledEffect |
-| useSuspendEffect |
-| useAbortEffect |
+| `useRateChangeEffect` |
+| `useStalledEffect` |
+| `useSuspendEffect` |
+| `useAbortEffect` |
 
 ### Types
 
