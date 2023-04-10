@@ -5,7 +5,7 @@
 The version have a core events effects that video element tag is have
 
 | Hooks                   | Event           | Type                 | Description        |
-| ---   | :---            | :--             | ---                  |                    |
+| ---                     | :---            | :--                  | ---                |
 | `useReadyEffect`        | ``              | ``                   |                    |
 | `usePauseEffect`        | ``              | ``                   |                    |
 | `usePlayingEffect`      | ``              | ``                   |                    |
