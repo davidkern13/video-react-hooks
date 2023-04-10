@@ -2,7 +2,7 @@
 
 ### 1.1.7
 
-The version have a core events effects that video element tag is have
+The version have a core effects based on video element events
 
 | Hooks                   | Event           | Type                 | Description        |
 | ---                     | :---            | :--                  | ---                |
